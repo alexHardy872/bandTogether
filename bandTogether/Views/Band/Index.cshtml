@@ -6,58 +6,39 @@
 
 <h2>Index</h2>
 
-<div id="facebookPosts">
-    @foreach (var permaLink in Model.facebookPermalinks)
-    {
+<div id="socialContainer">
 
-        <div class="fb-post" data-href="@permaLink" data-width="300">
+    <div id="facebookPosts" style="max-height: 700px; max-width: 370px; background-color: darkblue; text-align: center; border-radius: 15px;">
+        <h2 style="color: white;">facebook</h2>
+        <div class="postScroller" style="overflow-y: scroll; overflow-x: hidden; max-width: 360px; max-height: 650px; background-color: white; display: inline-block; ">
+            @foreach (var permaLink in Model.facebookPermalinks)
+            {
+                <div class="postContainer">
+                    <div class="fb-post" data-href="@permaLink" data-width="330">
+                    </div>
+                </div>
+
+            }
+
         </div>
-
-
-    }
-
-    <div class="fb-post" data-href="https://www.facebook.com/1308735289192501/posts/2637589956307021/" data-width="300">
     </div>
+
+    <div id="twitterPosts" style="max-height: 700px; max-width: 370px; background-color: deepskyblue; text-align: center; border-radius: 15px;">
+        <h2 style="color: white;">twitter</h2>
+        <div class="postScroller" style="overflow-y: scroll; overflow-x: hidden; width: 360px; max-height: 650px; background-color: white; display: inline-block; ">
+
+            <a class="twitter-timeline" href="https://twitter.com/MudDogHC?ref_src=twsrc%5Etfw">Tweets by MudDogHC</a>
+
+
+
+        </div>
+    </div>
+
 </div>
 
 
-<script>
-    //$(document).ready(funtction)
-    //document.addEventListener('DOMContentLoaded', function () {
-    //    (function ($) {
-
-    //        var pageId = 1308735289192501;
-    //        var accessToken = "EAAINgaZBxQk0BAG3RoUi3qbXlmS43VbNvy5kQhOeczScjs5SlkHETBWllpsshfSZATOw1ZCoZACRE8TKf7UZAl2yZAidQ5HvK5iEXzA0buZCXCEAVktlBDXfiKELXmBs0h87UrJaxUCfrb7CymTqwCUR8Em5zRlC1iX9JtLqeJpDnNwmxRXYFE4eq9FQcYWInpxEsYQqaZBvgAZDZD";
-    //        var postFieldsPerma = "/posts?fields=[permalink_url";
-
-    //        function GetPosts(e) {
-
-    //            $.ajax({
-    //                url: 'https://graph.facebook.com/' + pageId + postFielsPerma + "&access_token=" + accessToken,
-    //                dataType: 'json',
-    //                type: 'get',
-    //                contentType: 'application/json',
-
-    //                success: function (data, textStatus, jQxhr) {
-    //                    allData = data;
-
-    //                    console.log("success?");
-
-    //                },
-    //                error: function (jqXhr, textStatus, errorThrown) {
-    //                    console.log(errorThrown);
-    //                }
-    //            })
-    //            if (e) {
-    //                e.preventDefault();
-    //            }
-
-    //        }
 
 
-    //    })(jQuery);
-    //}
-
-</script>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
 

@@ -8,6 +8,6 @@ namespace bandTogether.Private
     public class Secrets
     {
 
-        public static string facebookAccessToken = "EAAINgaZBxQk0BAG3RoUi3qbXlmS43VbNvy5kQhOeczScjs5SlkHETBWllpsshfSZATOw1ZCoZACRE8TKf7UZAl2yZAidQ5HvK5iEXzA0buZCXCEAVktlBDXfiKELXmBs0h87UrJaxUCfrb7CymTqwCUR8Em5zRlC1iX9JtLqeJpDnNwmxRXYFE4eq9FQcYWInpxEsYQqaZBvgAZDZD";
+        public static string facebookAccessToken = "EAAINgaZBxQk0BAOTX7whtwN3XJkjEdmyP334riBAFP2hLjwT9igih9BjGac18sQB58tOdokCOyLdYK0KGwDL3S9SzKuXPS2jZC3SbAL6pBgZA8xrSTEKtXooRof1G3RzKhQ8UbWk251yTq43mfYA9ksoUQQCjMv0hDVPMN8NjXhgpOZCKZBx7cez6arGBiMVrkpQSphQElgZDZD";
     }
 }
