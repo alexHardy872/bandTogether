@@ -1,6 +1,7 @@
 ﻿using bandTogether.Models;
 using bandTogether.Models.ViewModels;
 using bandTogether.Services.Band;
+using bandTogether.Services.BandSevices;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,17 +26,11 @@ namespace bandTogether.Controllers
         public async Task<ActionResult> Index()
         {
             BandSocialViewModel socialIndex = new BandSocialViewModel();
+            //string facebookPageId = "1308735289192501";
+            //socialIndex.facebookPermalinks = await FacebookService.GetPermaUrlFromPost(facebookPageId);
 
-            // get social posts
-            string facebookPageId = "1308735289192501";
 
-            socialIndex.facebookPermalinks = await FacebookService.GetPermaUrlFromPost(facebookPageId);
-
-            // get facebook posts
-
-            // get twitter posts
-
-            // get spotify info
+            YoutubeServices.GetChannelVideos("UCW89qBnjTxXFYTfHWbbHZkA");           // get spotify info
 
             // get youtube info
 
