@@ -13,7 +13,10 @@
 *.userprefs
 
 Private/
-
+Private
+private
+private/
+Secret/
 
 # Build results
 [Dd]ebug/

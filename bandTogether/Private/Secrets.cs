@@ -7,8 +7,9 @@ namespace bandTogether.Private
 {
     public class Secrets
     {
+        // THIS CLASS SHOULD BE IGNORED FROM GIT
 
-        public static string facebookAccessToken = "EAAINgaZBxQk0BAHw5Y18eowHHau17jBh10Lyq5YDERgOZCMWYoqjqZCmxm4lyfhquq3xkxzI8hd48vNwkLloZCeb1JgBNZBwTcx04vRZBImgS79MYgZCasfjrICtqZCV5VmowndnUciQxO5DNh36U93PS7JRddW8KoovmtG3uj49dJz7jkKQrww9xZAZBK3xcZC4vBzRXurIZAMm9QZDZD";
-        public static string youtubeAPIkey = "AIzaSyCVc5O-5Q35yzLuWtJgM8Z4XIQPo_mBAbM";
+        public static string facebookAccessToken = "";
+        public static string youtubeAPIkey = "";
     }
 }
