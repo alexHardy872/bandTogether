@@ -9,6 +9,8 @@ namespace bandTogether.Private
     {
         // THIS CLASS SHOULD BE IGNORED FROM GIT
 
+            // THIS SHOULD ALSO BE IGNORED
+
         public static string facebookAccessToken = "";
         public static string youtubeAPIkey = "";
     }

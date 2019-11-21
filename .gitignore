@@ -13,10 +13,8 @@
 *.userprefs
 
 Private/
-Private
-private
-private/
-Secret/
+Secrets.cs
+
 
 # Build results
 [Dd]ebug/
