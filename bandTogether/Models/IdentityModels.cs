@@ -29,5 +29,6 @@ namespace bandTogether.Models
         {
             return new ApplicationDbContext();
         }
+        public DbSet<Band> Bands { get; set; }
     }
 }

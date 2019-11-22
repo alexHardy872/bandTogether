@@ -8,94 +8,181 @@
 
 
 
-    <div class="optionsContainer">
-
-        <div class="optionsHeader" id="showSocials"><div class="txtBtn">Socials</div></div>
-        <div class="optionsHeader" id="showStreaming"><div class="txtBtn">Streaming</div></div>
-        <div class="optionsHeader" id="showAnalytics"><div class="txtBtn">Analytics</div></div>
-        <div class="optionsHeader" id="showEvents"><div class="txtBtn">Events</div></div>
+<div class="optionsContainer">
 
 
-    </div>
+    <div class="optionsHeader" id="showSocials"><div class="txtBtn">Socials</div></div>
+    <div class="optionsHeader" id="showStreaming"><div class="txtBtn">Streaming</div></div>
+    <div class="optionsHeader" id="showAnalytics"><div class="txtBtn">Analytics</div></div>
+    <div class="optionsHeader" id="showEvents"><div class="txtBtn">Events</div></div>
 
 
-    <div id="socialContainer" style="display: flex; justify-content: space-between;">
+</div>
 
-        <div id="twitterPosts" style="height: 700px; width: 370px; background-color: lightseagreen; text-align: center; border-radius: 15px;">
-            <h2 style="color: white;">New Post</h2>
-            <div class="postScroller" style="overflow-y: scroll; overflow-x: hidden; width: 360px; max-height: 650px; background-color: white; display: inline-block; ">
 
-                <form id="postMaker">
-                    <h3>Create a new Post</h3>
-                    <input type="text" name="socialAccount" value="postContent" />
-                    <input type="radio" name="socialAccount" value="facebook"> Facebook<br>
-                    <input type="radio" name="socialAccount" value="twitter"> Twitter<br>
-                    <input type="radio" name="socialAccount" value="bandTogether"> bandTogether<br />
 
-                    <button id="submitPost" type="submit">Submit Post</button>
+
+            @*<div id="newPost" style="display: flex; height: 100pt; background-color: lightseagreen; text-align: center; border-radius: 15px; margin-bottom: 15px;">
+                <h2 style="color: white;">New Post</h2>
+                <form id="postMaker" style="height: 90px; background-color: transparent; display: inline-block;">
+                    <h3 style="color: white;">Create a new Post</h3>
+                    <input type="text" name="status" value="postContent" />
+                    <input style="color: white; font-weight: bold; display: inline-block;" id="isFacebook" type="radio" name="isFacebook" value="facebook"> Facebook<br>
+                    <input style="color: white; font-weight: bold; display: inline-block;" id="isTwitter" type="radio" name="isTwitter" value="twitter"> Twitter<br>
+                    <input style="color: white; font-weight: bold; display: inline-block;" id="isBandTogether" type="radio" name="isBandTogether" value="bandTogether"> bandTogether<br />
+
+                    <button id="submitPost" type="button">Post To Socials</button>
                 </form>
+            </div>*@
+   
+
+    
+
+
+            <div id="socialContainer" style="display: flex; justify-content: space-between;">
 
 
 
-            </div>
-        </div>
+                <div id="twitterPosts" style="height: 700px; width: 370px; background-color: deepskyblue; text-align: center; border-radius: 15px; ">
+                    <h2 style="color: white;">twitter</h2>
+                    <div class="postScroller" style="overflow-y: scroll; overflow-x: hidden; width: 360px; max-height: 650px; background-color: white; display: inline-block; ">
 
-        <div id="facebookPosts" style="height: 700px; width: 370px; background-color: darkblue; text-align: center; border-radius: 15px; ">
-            <h2 style="color: white;">facebook</h2>
-            <div class="postScroller" style="overflow-y: scroll; overflow-x: hidden; max-width: 360px; max-height: 650px; background-color: white; display: inline-block; ">
+                        <a class="twitter-timeline" href="https://twitter.com/MudDogHC?ref_src=twsrc%5Etfw">Tweets by MudDogHC</a>
 
-                @if (Model.facebookPermalinks.Count == 0)
-                {
 
-                    <div class="postContainer">
-                        <h3 style="color: red;">Facebook Token Exipred</h3>
+
                     </div>
-                }
-                else
-                {
+                </div>
 
-                    @foreach (var permaLink in Model.facebookPermalinks)
-                    {
-                        <div class="postContainer">
-                            <div class="fb-post" data-href="@permaLink" data-width="330">
+                <div id="facebookPosts" style="height: 700px; width: 370px; background-color: darkblue; text-align: center; border-radius: 15px; ">
+                    <h2 style="color: white;">facebook</h2>
+                    <div class="postScroller" style="overflow-y: scroll; overflow-x: hidden; max-width: 360px; max-height: 650px; background-color: white; display: inline-block; ">
+
+                        @if (Model.facebookPermalinks.Count == 0)
+                        {
+                            <div class="postContainer">
+                                <h3 style="color: red;">Facebook Token Exipred</h3>
                             </div>
+                        }
+                        else
+                        {
+                            foreach (var permaLink in Model.facebookPermalinks)
+                            {
+                                <div class="postContainer">
+                                    <div class="fb-post" data-href="@permaLink" data-width="330">
+                                    </div>
+                                </div>
+                            }
+                        }
+                    </div>
+                </div>
+
+                <div id="bandTogetherPosts" style="height: 700px; width: 370px; background-color: hotpink; text-align: center; border-radius: 15px;">
+                    <h2 style="color: white;">bandTogether</h2>
+                    <div class="postScroller" style="overflow-y: scroll; overflow-x: hidden; width: 360px; max-height: 650px; background-color: white; display: inline-block; ">
+
+                        <div style="width: 330px; background-color: white; border: 2px solid grey; color: black; min-height: 90px;">
+                            Example Post here!
+                        </div>
+                        <div style="width: 330px; background-color: white; border: 2px solid grey; color: black; min-height: 90px;">
+                            Example Post here!
+                        </div>
+                        <div style="width: 330px; background-color: white; border: 2px solid grey; color: black; min-height: 90px;">
+                            Example Post here!
+                        </div>
+                        <div style="width: 330px; background-color: white; border: 2px solid grey; color: black; min-height: 90px;">
+                            Example Post here!
+                        </div>
+                        <div style="width: 330px; background-color: white; border: 2px solid grey; color: black; min-height: 90px;">
+                            Example Post here!
+                        </div>
+                        <div style="width: 330px; background-color: white; border: 2px solid grey; color: black; min-height: 90px;">
+                            Example Post here!
+                        </div>
+                        <div style="width: 330px; background-color: white; border: 2px solid grey; color: black; min-height: 90px;">
+                            Example Post here!
                         </div>
 
-                    }
+
+
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+
+
+
+
+
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        (function ($) {
+
+
+            //function postMovie(e) {
+            //    var dict = {
+            //        Title: this["title"].value,
+            //        DirectorName: this["director"].value,
+            //        Genre: this["genre"].value,
+            //        ImageUrl: this["image"].value
+            //    };
+
+            //    $.ajax({
+            //        url: 'https://localhost:44352/api/movie',
+            //        dataType: 'json',
+            //        type: 'post',
+            //        contentType: 'application/json',
+            //        data: JSON.stringify(dict),
+            //        success: function (data, textStatus, jQxhr) {
+
+            //            $("#createPop").hide();
+            //            console.log("success?");
+            //            $('#response pre').html(data);
+            //            $('#formOneInput1').val('');
+            //            $('#formOneInput2').val('');
+            //            $('#formOneInput3').val('');
+            //            $('#formOneInput4').val('');
+            //            GetAllMovies();
+            //        },
+            //        error: function (jqXhr, textStatus, errorThrown) {
+            //            console.log(errorThrown);
+            //        }
+            //    });
+            //    e.preventDefault();
+
+
+
+
+
+                function readForm(e) {
+                    const val = $('input[name=isTwitter]:checked').val();
+                    alert(val);
+                    alert($("#postContent").val())
+
+                    
+
+                    
+                    const val = $('input[name=isBandTogether]:checked').val();
+                       alert(val);
+                    
                 }
 
 
-
-            </div>
-        </div>
-
-        <div id="twitterPosts" style="height: 700px; width: 370px; background-color: deepskyblue; text-align: center; border-radius: 15px; ">
-            <h2 style="color: white;">twitter</h2>
-            <div class="postScroller" style="overflow-y: scroll; overflow-x: hidden; width: 360px; max-height: 650px; background-color: white; display: inline-block; ">
-
-                <a class="twitter-timeline" href="https://twitter.com/MudDogHC?ref_src=twsrc%5Etfw">Tweets by MudDogHC</a>
-
-
-
-            </div>
-        </div>
-
-        <div id="twitterPosts" style="height: 700px; width: 370px; background-color: hotpink; text-align: center; border-radius: 15px;">
-            <h2 style="color: white;">bandTogether</h2>
-            <div class="postScroller" style="overflow-y: scroll; overflow-x: hidden; width: 360px; max-height: 650px; background-color: white; display: inline-block; ">
-
-                <a class="twitter-timeline" href="https://twitter.com/MudDogHC?ref_src=twsrc%5Etfw">Tweets by MudDogHC</a>
-
-
-
-            </div>
-        </div>
-
-    </div>
+                $('#submitPost').submit(readForm);
 
 
 
 
-    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-    <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
+
+            
+        })(jQuery);
+    });
+</script>
 

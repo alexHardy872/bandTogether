@@ -26,11 +26,11 @@ namespace bandTogether.Controllers
         public async Task<ActionResult> Index()
         {
             BandSocialViewModel socialIndex = new BandSocialViewModel();
-            //string facebookPageId = "1308735289192501";
-            //socialIndex.facebookPermalinks = await FacebookService.GetPermaUrlFromPost(facebookPageId);
+            string facebookPageId = "1308735289192501";
+            socialIndex.facebookPermalinks = await FacebookService.GetPermaUrlFromPost(facebookPageId);
 
 
-            YoutubeServices.GetChannelVideos("UCW89qBnjTxXFYTfHWbbHZkA");           // get spotify info
+           // YoutubeServices.GetChannelVideos("UCW89qBnjTxXFYTfHWbbHZkA");           // get spotify info
 
             // get youtube info
 
